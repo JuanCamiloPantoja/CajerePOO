@@ -81,7 +81,10 @@ namespace CajereLynx
             _balance += amount;
             Console.WriteLine($"Has depositado {amount:C}.");
         }
-
+        private void CheckBalance()
+        {
+            Console.WriteLine($"Tu saldo actual es {_balance:C}.");
+        }
 
     }
 }
