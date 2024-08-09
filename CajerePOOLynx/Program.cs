@@ -29,6 +29,38 @@ namespace CajereLynx
             string password = Console.ReadLine();
             return username == _username && password == _password;
         }
+        public void MainMenu()
+        {
+            Console.WriteLine("Menú principal:");
+            Console.WriteLine("1. Retirar dinero");
+            Console.WriteLine("2. Depositar dinero");
+            Console.WriteLine("3. Consultar saldo");
+            Console.WriteLine("4. Transferir dinero");
+            Console.WriteLine("5. Salir");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    Withdraw();
+                    break;
+                case 2:
+                    Deposit();
+                    break;
+                case 3:
+                    CheckBalance();
+                    break;
+                case 4:
+                    Transfer();
+                    break;
+                case 5:
+                    Console.WriteLine("Hasta luego!");
+                    break;
+                default:
+                    Console.WriteLine("Opción inválida");
+                    break;
+            }
+        }
+
 
     }
 }
