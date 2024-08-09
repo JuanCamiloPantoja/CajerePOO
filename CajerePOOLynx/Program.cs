@@ -60,6 +60,20 @@ namespace CajereLynx
                     break;
             }
         }
+        private void Withdraw()
+        {
+            Console.Write("Ingrese la cantidad a retirar: ");
+            decimal amount = Convert.ToDecimal(Console.ReadLine());
+            if (amount <= _balance)
+            {
+                _balance -= amount;
+                Console.WriteLine($"Has retirado {amount:C}.");
+            }
+            else
+            {
+                Console.WriteLine("No tienes suficiente saldo");
+            }
+        }
 
 
     }
