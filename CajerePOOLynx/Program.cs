@@ -21,5 +21,14 @@ namespace CajereLynx
                 Console.WriteLine("Inicio de sesión fallido");
             }
         }
+        public bool Login()
+        {
+            Console.Write("Ingrese su usuario: ");
+            string username = Console.ReadLine();
+            Console.Write("Ingrese su contraseña: ");
+            string password = Console.ReadLine();
+            return username == _username && password == _password;
+        }
+
     }
 }
