@@ -85,6 +85,23 @@ namespace CajereLynx
         {
             Console.WriteLine($"Tu saldo actual es {_balance:C}.");
         }
-
+        private void Transfer()
+        {
+            Console.Write("Ingrese la cantidad a transferir: ");
+            decimal amount = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Ingrese el número de cuenta destinatario: ");
+            string accountNumber = Console.ReadLine();
+            if (amount <= _balance)
+            {
+                _balance -= amount;
+                Console.WriteLine($"Has transferido {amount:C} a la cuenta {accountNumber}.");
+            }
+            else
+            {
+                Console.WriteLine("No tienes suficiente saldo");
+            }
+        }
+    }
+}
     }
 }
