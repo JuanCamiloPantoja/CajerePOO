@@ -74,6 +74,13 @@ namespace CajereLynx
                 Console.WriteLine("No tienes suficiente saldo");
             }
         }
+        public void Deposit()
+        {
+            Console.Write("Ingrese la cantidad a depositar: ");
+            decimal amount = Convert.ToDecimal(Console.ReadLine());
+            _balance += amount;
+            Console.WriteLine($"Has depositado {amount:C}.");
+        }
 
 
     }
